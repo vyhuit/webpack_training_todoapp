@@ -6,12 +6,6 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js'
   },
-  // mode: "none",
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, './dist')
-    }
-  },
   module: {
     rules: [
       {
@@ -32,5 +26,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.jsx', '.js', '.tsx', '.ts'],
-  }
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, './dist')
+    }
+  },
 }
